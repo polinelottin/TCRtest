@@ -1,3 +1,5 @@
+date=`date +"%F %T"`
+
 fswatch -0 $@ -e ".*" -i "\\.py$" | while read -d "" event; \
 do \
     pytest;
