@@ -9,23 +9,22 @@ do \
         # echo $(git status); 
         # echo ''; 
 
-        # echo "IHU! Passou, bora commitar!";
-        # git add -A;
+        echo "IHU! Passou, bora commitar!";
+        git add -A;
 
 
         # echo $(git status); 
         # echo '';
 
-        date=`date +"%F %T"`
+        # date=`date +"%F %T"`
 
-        echo '${date}'
-
-        # git commit -m 'TCR working $date @ $hostname';
+        git commit -m 'TCR working $(date +%F)';
         
 
-        echo $(git status);
+        # echo $(git status);
 
     else
+        echo fail;
         # git reset --hard
 
         # echo $(git status);
