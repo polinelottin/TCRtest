@@ -30,7 +30,9 @@ do \
         echo $(git status);
 
     else
-        echo "Not Cool Beans"
+        git reset --hard
+
+        echo $(git status);
     fi
 done
 
