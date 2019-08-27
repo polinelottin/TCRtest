@@ -6,14 +6,18 @@ do \
 
     if [ $? = 0 ]
     then 
+
+        git status;
+
+        echo status $?;
         # echo $(git status); 
         # echo ''; 
 
-        date=`date +"%F %T"`
+        # date=`date +"%F %T"`
 
-        echo "IHU! Passou, bora commitar!";
-        git add -A;
-        git commit -m "TCR working ${date}";
+        # echo "IHU! Passou, bora commitar!";
+        # git add -A;
+        # git commit -m "TCR working ${date}";
 
         # echo $(git status);
 
