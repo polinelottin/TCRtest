@@ -9,17 +9,11 @@ do \
         # echo $(git status); 
         # echo ''; 
 
+        date=`date +"%F %T"`
+
         echo "IHU! Passou, bora commitar!";
         git add -A;
-
-
-        # echo $(git status); 
-        # echo '';
-
-        # date=`date +"%F %T"`
-
-        git commit -m 'TCR working $(date +%F)';
-        
+        git commit -m "TCR working ${date}";
 
         # echo $(git status);
 
