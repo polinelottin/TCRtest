@@ -1,4 +1,4 @@
-date=`date +"%F %T"`
+#!/bin/bash 
 
 fswatch -0 $@ -e ".*" -i "\\.py$" | while read -d "" event; \
 do \
@@ -9,21 +9,25 @@ do \
         # echo $(git status); 
         # echo ''; 
 
-        echo "IHU! Passou, bora commitar!";
-        git add -A;
+        # echo "IHU! Passou, bora commitar!";
+        # git add -A;
 
 
         # echo $(git status); 
         # echo '';
 
-        git commit -m 'TCR working $date @ $hostname';
+        date=`date +"%F %T"`
+
+        echo '${date}'
+
+        # git commit -m 'TCR working $date @ $hostname';
         
 
         echo $(git status);
 
     else
-        git reset --hard
+        # git reset --hard
 
-        echo $(git status);
+        # echo $(git status);
     fi
 done
